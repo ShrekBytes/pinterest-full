@@ -13,9 +13,8 @@
 - [Quick Install](#quick-install)
 - [Supported Formats](#supported-formats)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
 - [License](#license)
-- [Acknowledgements](#acknowledgements)
+- [Contributing](#contributing)
 
 ## Features
 
