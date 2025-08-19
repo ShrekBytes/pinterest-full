@@ -49,18 +49,17 @@
   <img src="screenshots/gallery.png" alt="Pinterest Full - Gallery interface showing multiple images with navigation" width="99%"/>
 </p>
 
-## Contributing
-
-Found a bug? Want a feature? [Open an issue](https://github.com/ShrekBytes/pinterest-full/issues) or submit a pull request!
 
 ## License
 
 GPL-3.0 - See [LICENSE](LICENSE) file.
 
+
 ## Acknowledgements
 
 This script is based on the excellent work of **TiLied**'s [Pinterest Plus](https://greasyfork.org/en/scripts/30839-pinterest-plus) script.
 
----
 
-**Made with ❤️ by [ShrekBytes](https://github.com/ShrekBytes)**
+## Contributing
+
+Found a bug? Want a feature? [Open an issue](https://github.com/ShrekBytes/pinterest-full/issues) or submit a pull request!
