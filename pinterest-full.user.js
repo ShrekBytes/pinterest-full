@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Pinterest Full
 // @namespace    https://github.com/ShrekBytes
-// @description  View & download original full size images/videos(no login required) and a pleasing UI
-// @version      1.0.0
+// @description  View & download original full size images/videos (no login required) and a pleasing UI
+// @version      1.0.1
 // @author       ShrekBytes
 // @match        https://*.pinterest.com/*
 // @match        https://*.pinterest.at/*
