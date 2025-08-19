@@ -2,7 +2,7 @@
 
 > A lightweight userscript that lets you **download original quality images and videos from Pinterest without logging in**. Adds View and Download buttons with a beautiful gallery interface.
 
-![pinterest-full](screenshots/1.png)
+![pinterest-full](screenshots/pc.png)
 
 [![Pinterest Full](https://img.shields.io/badge/Install%20Userscript-Pinterest%20Full-blue?style=for-the-badge&logo=userscript)](https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/pinterest-full.user.js)
 [![View on GreasyFork](https://img.shields.io/badge/View%20on-GreasyFork-4E9A06?style=for-the-badge&logo=greasyfork)](https://greasyfork.org/en/scripts/544839-pinterest-full)
@@ -45,8 +45,10 @@
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/1.png" alt="Pinterest Full - Main interface showing View and Download buttons" width="99%"/>
-  <img src="screenshots/gallery.png" alt="Pinterest Full - Gallery interface showing multiple images with navigation" width="99%"/>
+  <img src="screenshots/mobile.png" alt="Pinterest Full - Main interface showing View and Download buttons" width="99%"/>
+     <img src="screenshots/pc.png" alt="Pinterest Full - Main interface showing View and Download buttons" width="99%"/>
+  <img src="screenshots/gallery_mobile.png" alt="Pinterest Full - Gallery interface showing multiple images with navigation" width="99%"/>
+  <img src="screenshots/gallery_pc.png" alt="Pinterest Full - Gallery interface showing multiple images with navigation" width="99%"/>
 </p>
 
 
