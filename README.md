@@ -5,7 +5,7 @@
 ![pinterest-full](screenshots/pc.png)
 
 [![Pinterest Full](https://img.shields.io/badge/Install%20Userscript-Pinterest%20Full-blue?style=for-the-badge&logo=userscript)](https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/pinterest-full.user.js)
-[![View on GreasyFork](https://img.shields.io/badge/View%20on-GreasyFork-4E9A06?style=for-the-badge&logo=greasyfork)](https://greasyfork.org/en/scripts/544839-pinterest-full)
+[![View on GreasyFork](https://img.shields.io/badge/View%20on-GreasyFork-4E9A06?style=for-the-badge&logo=greasyfork)](https://greasyfork.org/en/scripts/546432-pinterest-full)
 
 ## Table of Contents
 
