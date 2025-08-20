@@ -44,9 +44,9 @@
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/mobile.png" alt="Pinterest Full - Main interface showing View and Download buttons" width="99%"/>
+  <img src="screenshots/mobile.png" alt="Pinterest Full - Main interface showing View and Download buttons" width="49%"/>
+     <img src="screenshots/gallery_mobile.png" alt="Pinterest Full - Gallery interface showing multiple images with navigation" width="49%"/>
      <img src="screenshots/pc.png" alt="Pinterest Full - Main interface showing View and Download buttons" width="99%"/>
-  <img src="screenshots/gallery_mobile.png" alt="Pinterest Full - Gallery interface showing multiple images with navigation" width="99%"/>
   <img src="screenshots/gallery_pc.png" alt="Pinterest Full - Gallery interface showing multiple images with navigation" width="99%"/>
 </p>
 
