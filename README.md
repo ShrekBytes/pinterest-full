@@ -1,6 +1,6 @@
 # Pinterest Full
 
-> A lightweight userscript that lets you **download original quality images and videos from Pinterest without logging in**. Adds View and Download buttons with a beautiful gallery interface.
+> A lightweight userscript that lets you **download original quality images from Pinterest without logging in**. Adds View and Download buttons with a beautiful gallery interface.
 
 ![pinterest-full](screenshots/pc.png)
 
@@ -19,8 +19,8 @@
 ## Features
 
 - **No Login Required** - Download original content without Pinterest account
-- **Original Quality** - Get full-size images and videos, not compressed versions
-- **View Button** - Opens images/videos in a full-screen gallery
+- **Original Quality** - Get full-size images, not compressed versions
+- **View Button** - Opens images in a full-screen gallery
 - **Download Button** - Downloads original quality content
 - **Gallery Navigation** - Browse multiple images with thumbnails
 - **Mobile Optimized** - Touch gestures and responsive design
@@ -38,7 +38,6 @@
 ## Supported Formats
 
 - **Images**: JPG, PNG, GIF, WebP
-- **Videos**: MP4, WebM
 - **Story Pins**: Multi-page content
 
 ## Screenshots
@@ -50,16 +49,13 @@
      <img src="screenshots/gallery_mobile.png" alt="Pinterest Full - Gallery interface showing multiple images with navigation" width="49%"/>
 </p>
 
-
 ## License
 
 GPL-3.0 - See [LICENSE](LICENSE) file.
 
-
 ## Acknowledgements
 
 This script is based on the excellent work of **TiLied**'s [Pinterest Plus](https://greasyfork.org/en/scripts/30839-pinterest-plus) script.
-
 
 ## Contributing
 

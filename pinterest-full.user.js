@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Pinterest Full
 // @namespace    https://github.com/ShrekBytes
-// @description  View & download original full size images/videos (no login required) and a pleasing UI
+// @description  View & download original full size images (no login required) and a pleasing UI
 // @version      1.0.1
 // @author       ShrekBytes
 // @match        https://*.pinterest.com/*
@@ -85,7 +85,7 @@
     .pp-stage {
       display:grid; place-items:center; overflow:auto; padding: 16px;
     }
-    .pp-img, .pp-video { max-width: 95vw; max-height: 82vh; border-radius: 12px; box-shadow: 0 12px 48px rgba(0,0,0,.4); }
+    .pp-img { max-width: 95vw; max-height: 82vh; border-radius: 12px; box-shadow: 0 12px 48px rgba(0,0,0,.4); }
   
     .pp-footer {
       display:flex; align-items:center; justify-content:center; gap:8px; padding:10px; background: rgba(20,20,20,.6);
@@ -132,7 +132,7 @@
     }
   
       async function fetchPinData(pinId) {
-        // Use Pinterest internal resource endpoint (best quality + videos/story pages)
+        // Use Pinterest internal resource endpoint (best quality + story pages)
         try {
           const t = Date.now();
           const u = `https://${location.host}/resource/PinResource/get/?source_url=%2Fpin%2F${encodeURIComponent(pinId)}%2F&data=%7B%22options%22%3A%7B%22id%22%3A%22${encodeURIComponent(pinId)}%22%2C%22field_set_key%22%3A%22detailed%22%2C%22noCache%22%3Atrue%7D%2C%22context%22%3A%7B%7D%7D&_=${t}`;
@@ -144,7 +144,7 @@
           if (!res.ok) throw new Error('Pin API not ok: ' + res.status);
           const json = await res.json();
           if (json?.resource_response?.status !== 'success') throw new Error('Pin API bad payload');
-          return json.resource_response.data; // contains images.orig, videos, story_pin_data.pages, etc.
+          return json.resource_response.data; // contains images.orig, story_pin_data.pages, etc.
         } catch (e) {
           // Silent fail for network errors
           return null;
@@ -152,17 +152,11 @@
       }
   
     function getBestFromPinData(pin) {
-      /** Returns {items: [{type:'image'|'video', url, width, height, thumb?}], title?} */
+      /** Returns {items: [{url, width, height, thumb?}], title?} */
       const pack = { items: [], title: (pin?.grid_title || pin?.title || '').trim() || '' };
       if (!pin) return pack;
   
-      if (pin.videos?.video_list) {
-        // choose the largest video by width
-        const entries = Object.values(pin.videos.video_list);
-        entries.sort((a,b)=> (b.width||0)-(a.width||0));
-        const v = entries[0];
-        if (v?.url) pack.items.push({ type:'video', url: v.url, width: v.width, height: v.height, thumb: pin.images?.['orig']?.url || '' });
-      }
+
   
       if (pin.story_pin_data?.pages?.length) {
         for (const page of pin.story_pin_data.pages) {
@@ -171,19 +165,19 @@
                  || page?.blocks?.[0]?.image?.images?.originals?.url
                  || page?.blocks?.[0]?.image?.images?.orig?.url
                  || '';
-          if (url) pack.items.push({ type:'image', url, width: 0, height: 0, thumb: url });
+          if (url) pack.items.push({ url, width: 0, height: 0, thumb: url });
         }
       }
   
       const orig = pin.images?.orig;
       if (orig?.url) {
-        // If we already pushed story/video, keep this as first (cover) if items is empty
+        // If we already pushed story content, keep this as first (cover) if items is empty
         if (!pack.items.length) {
-          pack.items.push({ type:'image', url: orig.url, width: orig.width||0, height: orig.height||0, thumb: orig.url });
+          pack.items.push({ url: orig.url, width: orig.width||0, height: orig.height||0, thumb: orig.url });
         } else {
           // ensure main orig is present once (dedupe)
           if (!pack.items.some(i => i.url === orig.url)) {
-            pack.items.unshift({ type:'image', url: orig.url, width: orig.width||0, height: orig.height||0, thumb: orig.url });
+            pack.items.unshift({ url: orig.url, width: orig.width||0, height: orig.height||0, thumb: orig.url });
           }
         }
       }
@@ -199,12 +193,12 @@
       const closeup = qs("div[data-test-id='CloseupMainPin'], div.reactCloseupScrollContainer") || document;
       const img = qs('img[srcset], img[src]', closeup);
       const url = fromSrcOrSrcset(img);
-      return url ? [{ type:'image', url, width: 0, height: 0, thumb: url }] : [];
+              return url ? [{ url, width: 0, height: 0, thumb: url }] : [];
     }
   
     // Overlay (persistent gallery)
     const Overlay = (() => {
-      let root, stage, footer, head, titleEl, resEl;
+      let root, stage, footer, titleEl, resEl;
       let currentIndex = 0;
       let items = [];
   
@@ -230,7 +224,7 @@
         document.body.appendChild(root);
         stage   = qs('.pp-stage', root);
         footer  = qs('.pp-footer', root);
-        head    = qs('.pp-head', root);
+
         titleEl = qs('#pp-title', root);
         resEl   = qs('#pp-res', root);
   
@@ -299,21 +293,13 @@
         const cur = items[currentIndex];
         if (!cur) return;
   
-        let el;
-        if (cur.type === 'video') {
-          el = document.createElement('video');
-          el.className = 'pp-video';
-          el.controls = true;
-          el.src = cur.url;
-        } else {
-          el = document.createElement('img');
-          el.className = 'pp-img';
-          el.alt = titleEl.textContent || 'Image';
-          el.src = cur.url;
-        }
+        const el = document.createElement('img');
+        el.className = 'pp-img';
+        el.alt = titleEl.textContent || 'Image';
+        el.src = cur.url;
         el.addEventListener('load', () => {
-          const w = (el.videoWidth || el.naturalWidth || cur.width || 0);
-          const h = (el.videoHeight || el.naturalHeight || cur.height || 0);
+          const w = (el.naturalWidth || cur.width || 0);
+          const h = (el.naturalHeight || cur.height || 0);
           resEl.textContent = w && h ? `${w}×${h}` : '';
         }, { once:true });
   
@@ -353,8 +339,8 @@
   
       function getExt(u) {
         const q = u.split('?')[0];
-        const m = q.match(/\.(mp4|webm|jpg|jpeg|png|gif)$/i);
-        return m ? m[0] : (u.includes('mp4') ? '.mp4' : '.jpg');
+        const m = q.match(/\.(jpg|jpeg|png|gif|webp)$/i);
+        return m ? m[0] : '.jpg';
       }
   
       async function downloadCurrent() {
@@ -439,7 +425,7 @@
         btn.id = 'pp-main-btn';
         btn.className = 'pp-btn';
         btn.textContent = 'View';
-        btn.setAttribute('aria-label', 'View full size image or video');
+        btn.setAttribute('aria-label', 'View full size image');
         btn.setAttribute('role', 'button');
   
         // Click behaviors
@@ -483,7 +469,7 @@
           d.id = 'pp-mini-download';
           d.className = 'pp-btn';
           d.textContent = 'Download';
-          d.setAttribute('aria-label', 'Download current image or video');
+          d.setAttribute('aria-label', 'Download current image');
           d.setAttribute('role', 'button');
           d.addEventListener('click', async () => {
             // Prevent multiple rapid clicks
@@ -499,10 +485,10 @@
               if (!pack.items.length) return;
               const cur = pack.items[0];
               if (typeof GM_download === 'function') {
-                GM_download({ url: cur.url, name: (pack.title || 'pinterest') + (cur.url.includes('.mp4')?'.mp4':'.jpg') });
+                GM_download({ url: cur.url, name: (pack.title || 'pinterest') + getExt(cur.url) });
               } else {
                 const a = document.createElement('a');
-                a.href = cur.url; a.download = (pack.title || 'pinterest');
+                a.href = cur.url; a.download = (pack.title || 'pinterest') + getExt(cur.url);
                 document.body.appendChild(a); a.click(); a.remove();
               }
             } catch (error) {
