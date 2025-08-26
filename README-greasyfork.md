@@ -38,9 +38,10 @@
 
 ### Mobile Interface
 
-<p><img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/mobile.png" alt="Mobile Main Interface" width="49%">
-
-<img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/gallery_mobile.png" alt="Mobile Gallery" width="49%"></p>
+<p>
+<img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/mobile.png" alt="Mobile Main Interface" width="49%">
+<img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/gallery_mobile.png" alt="Mobile Gallery" width="49%">
+</p>
 
 ## 🤝 Contributing
 
