@@ -31,16 +31,16 @@
 ## 📸 Screenshots
 
 ### Desktop Interface
+
 ![Desktop Main Interface](https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/pc.png)
 
-### Desktop Gallery
 ![Desktop Gallery](https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/gallery_pc.png)
 
 ### Mobile Interface
-![Mobile Main Interface](https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/mobile.png)
 
-### Mobile Gallery
-![Mobile Gallery](https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/gallery_mobile.png)
+<img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/mobile.png" alt="Mobile Main Interface" width="49%">
+
+<img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/gallery_mobile.png" alt="Mobile Gallery" width="49%">
 
 ## 🤝 Contributing
 
