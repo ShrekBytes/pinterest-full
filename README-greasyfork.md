@@ -32,9 +32,10 @@
 
 ### Desktop Interface
 
-![Desktop Main Interface](https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/pc.png)
-
-![Desktop Gallery](https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/gallery_pc.png)
+<p>
+<img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/pc.png" alt="Desktop Main Interface">
+<img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/gallery_pc.png" alt="Desktop Gallery">
+</p>
 
 ### Mobile Interface
 
