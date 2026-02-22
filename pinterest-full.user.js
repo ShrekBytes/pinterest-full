@@ -2,7 +2,7 @@
 // @name         Pinterest Full
 // @namespace    https://github.com/ShrekBytes
 // @description  View & download original full size images (no login required) and a pleasing UI
-// @version      3.0.0
+// @version      3.1.0
 // @author       ShrekBytes
 // @match        https://*.pinterest.com/*
 // @match        https://*.pinterest.at/*
