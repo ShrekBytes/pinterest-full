@@ -38,7 +38,7 @@
   <img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/gallery_pc.png" alt="Pinterest Full - Gallery interface showing multiple images with navigation" width="99%"/>
 </p>
 
-### Mobile (Desktop Mode)
+### Mobile
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/mobile.png" alt="Pinterest Full - Main interface showing View and Download buttons in Desktop Mode" width="49%"/>
