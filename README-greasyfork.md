@@ -59,12 +59,11 @@ This script is based on the excellent work of **TiLied**'s [Pinterest Plus](http
 
 Found a bug? Want a feature? [Open an issue on GitHub](https://github.com/ShrekBytes/pinterest-full/issues) or submit a pull request!
 
----
-
-**Made with ❤️ by [ShrekBytes](https://github.com/ShrekBytes)**
-
 ## Links
 
 - **GitHub Repository**: https://github.com/ShrekBytes/pinterest-full
 - **Report Issues**: https://github.com/ShrekBytes/pinterest-full/issues
 - **Source Code**: https://github.com/ShrekBytes/pinterest-full
+
+**Made with ❤️ by [ShrekBytes](https://github.com/ShrekBytes)**
+
