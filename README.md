@@ -42,6 +42,7 @@
 - **Story Pins**: Multi-page content
 
 ## Screenshots
+
 ### Desktop
 <p align="center">
   <img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/pc.png" alt="Pinterest Full - Main interface showing View and Download buttons" width="99%"/>
