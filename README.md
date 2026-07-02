@@ -42,12 +42,16 @@
 - **Story Pins**: Multi-page content
 
 ## Screenshots
-
+### Desktop
 <p align="center">
-  <img src="screenshots/pc.png" alt="Pinterest Full - Main interface showing View and Download buttons" width="99%"/>
-  <img src="screenshots/gallery_pc.png" alt="Pinterest Full - Gallery interface showing multiple images with navigation" width="99%"/>
-  <img src="screenshots/mobile.png" alt="Pinterest Full - Main interface showing View and Download buttons in Desktop Mode" width="49%"/>
-  <img src="screenshots/gallery_mobile.png" alt="Pinterest Full - Gallery interface on mobile browser in Desktop Mode" width="49%"/>
+  <img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/pc.png" alt="Pinterest Full - Main interface showing View and Download buttons" width="99%"/>
+  <img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/gallery_pc.png" alt="Pinterest Full - Gallery interface showing multiple images with navigation" width="99%"/>
+</p>
+
+### Mobile
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/mobile.png" alt="Pinterest Full - Main interface showing View and Download buttons in Desktop Mode" width="49%"/>
+  <img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/gallery_mobile.png" alt="Pinterest Full - Gallery interface on mobile browser in Desktop Mode" width="49%"/>
 </p>
 
 > **Note:** Pinterest recently updated its mobile interface. The userscript continues to work on mobile browsers when **Desktop Site/Desktop Mode** is enabled.
