@@ -50,7 +50,7 @@
   <img src="screenshots/gallery_mobile.png" alt="Pinterest Full - Gallery interface on mobile browser in Desktop Mode" width="49%"/>
 </p>
 
-> **Note:** Pinterest recently changed its mobile interface. The userscript continues to work on mobile browsers when **Desktop Site/Desktop Mode** is enabled.
+> **Note:** Pinterest recently updated its mobile interface. The userscript continues to work on mobile browsers when **Desktop Site/Desktop Mode** is enabled.
 
 ## License
 
