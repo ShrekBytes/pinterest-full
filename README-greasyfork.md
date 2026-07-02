@@ -6,12 +6,12 @@
 
 ## ✨ Features
 
-- **🚫 No Login Required** - Download original content without Pinterest account
+- **🚫 No Login Required** - Download original content without a Pinterest account
 - **🖼️ Original Quality** - Get full-size images, not compressed versions
 - **View Button** - Opens images in a full-screen gallery
 - **Download Button** - Downloads original quality content
 - **Gallery Navigation** - Browse multiple images with thumbnails
-- **Mobile Optimized** - Touch gestures and responsive design
+- **📱 Mobile Support** - Works on mobile browsers when **Desktop Site/Desktop Mode** is enabled
 
 ## 🚀 Quick Install
 
@@ -20,8 +20,9 @@
    - [Tampermonkey](https://www.tampermonkey.net/)
    - [ScriptCat](https://scriptcat.org/)
 2. [Click here to install](https://github.com/ShrekBytes/pinterest-full/raw/main/pinterest-full.user.js)
-3. Visit any Pinterest pin page
-4. Look for the **View** and **Download** buttons!
+3. Visit any Pinterest pin page.
+4. **On mobile browsers, enable Desktop Site/Desktop Mode first.**
+5. Look for the **View** and **Download** buttons!
 
 ## 🔧 Supported Formats
 
@@ -37,12 +38,14 @@
 <img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/gallery_pc.png" alt="Desktop Gallery">
 </p>
 
-### Mobile Interface
+### Mobile Interface *(Desktop Mode)*
 
 <p>
-<img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/mobile.png" alt="Mobile Main Interface" width="49%">
-<img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/gallery_mobile.png" alt="Mobile Gallery" width="49%">
+<img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/mobile.png" alt="Mobile Main Interface in Desktop Mode" width="49%">
+<img src="https://raw.githubusercontent.com/ShrekBytes/pinterest-full/main/screenshots/gallery_mobile.png" alt="Mobile Gallery in Desktop Mode" width="49%">
 </p>
+
+> **Note:** Pinterest recently updated its mobile interface. The userscript continues to work on mobile browsers when **Desktop Site/Desktop Mode** is enabled.
 
 ## 🤝 Contributing
 
@@ -62,6 +65,6 @@ This script is based on the excellent work of **TiLied**'s [Pinterest Plus](http
 
 ## 🔗 Links
 
-- **GitHub Repository**: [https://github.com/ShrekBytes/pinterest-full](https://github.com/ShrekBytes/pinterest-full)
-- **Report Issues**: [https://github.com/ShrekBytes/pinterest-full/issues](https://github.com/ShrekBytes/pinterest-full/issues)
-- **Source Code**: [https://github.com/ShrekBytes/pinterest-full](https://github.com/ShrekBytes/pinterest-full)
+- **GitHub Repository**: https://github.com/ShrekBytes/pinterest-full
+- **Report Issues**: https://github.com/ShrekBytes/pinterest-full/issues
+- **Source Code**: https://github.com/ShrekBytes/pinterest-full
